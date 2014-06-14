@@ -1,0 +1,29 @@
+{
+  "name": "flickr-favorites",
+  "version": "0.0.0",
+  "description": "List favorite photos of a Flickr user",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "flickr",
+    "photos",
+    "photography",
+    "api",
+    "client"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/flickr-favorites.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD",
+  "devDependencies": {
+    "prova": "^1.11.1",
+    "with-env": "^0.1.0"
+  },
+  "dependencies": {
+    "flickr-client": "0.0.2"
+  }
+}
