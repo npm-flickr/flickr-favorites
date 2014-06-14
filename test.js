@@ -18,3 +18,12 @@ test('first 100 favs', function (t) {
     t.ok(result.photos[0].date_faved);
   });
 });
+
+test('second page', function (t) {
+  favs('98269877@N00', { page: 2 }, function (error, result) {
+    t.plan(3);
+    t.error(error);
+    t.equal(result.page, 2);
+    t.ok(result.photos.length > 95);
+  });
+});

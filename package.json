@@ -14,7 +14,7 @@
     "client"
   ],
   "repository": {
-    "url": "git@github.com:azer/flickr-favorites.git",
+    "url": "git@github.com:npm-flickr/flickr-favorites.git",
     "type": "git"
   },
   "author": "azer",
