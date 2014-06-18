@@ -1,6 +1,6 @@
 {
   "name": "flickr-favorites",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "List favorite photos of a Flickr user",
   "main": "index.js",
   "scripts": {
