@@ -1,4 +1,5 @@
 var createClient = require("flickr-client");
+var generateURLs = require("flickr-generate-urls");
 var client;
 
 module.exports = setup;
@@ -18,6 +19,10 @@ function favs (userId, options, callback) {
 
   client('favorites.getPublicList', options, function (error, response) {
     if (error) return callback(error);
+
+    response.photos.photo.forEach(function (p) {
+      p.urls = generateURLs(p);
+    });
 
     callback(undefined, {
       page: response.photos.page,
