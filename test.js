@@ -7,7 +7,7 @@ var favs = require("./")({
 
 test('first 100 favs', function (t) {
   favs('98269877@N00', function (error, result) {
-    t.plan(11);
+    t.plan(12);
     t.error(error);
     t.equal(result.page, 1);
     t.ok(result.pages > 20);
@@ -19,6 +19,7 @@ test('first 100 favs', function (t) {
     t.ok(result.photos[0].urls.medium);
     t.ok(result.photos[0].urls.square);
     t.ok(result.photos[0].urls.large);
+    t.ok(!/undefined/.test(result.photos[0].urls.medium));
   });
 });
 

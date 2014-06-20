@@ -21,7 +21,14 @@ function favs (userId, options, callback) {
     if (error) return callback(error);
 
     response.photos.photo.forEach(function (p) {
-      p.urls = generateURLs(p);
+      p.urls = generateURLs({
+        id: p.id,
+        secret: p.secret,
+        osecret: p.originalsecret,
+        format: "jpg",
+        farm: p.farm,
+        server: p.server
+      });
     });
 
     callback(undefined, {
